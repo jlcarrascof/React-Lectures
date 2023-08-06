@@ -1,8 +1,33 @@
-# React + Vite
+# React Lectures
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A project designed to track individual lessons aimed at enhancing my knowledge of React.
 
-Currently, two official plugins are available:
+## 📷 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+N/A in this branch, as it includes basic exercises covering JSX file structures, props usage, and functional and class component programming.
+
+## 🚀 Demo
+
+No demos are available for this branch.
+
+## Features
+
+1. 🌀 Basic React syntax.
+2. 📝 JSX file structures.
+3. 🧩 Components.
+4. 📚 Functional and class components.
+5. 🎁 Props usage.
+6. ⚙️ React lifecycle.
+
+## Technologies Used
+
+- ⚛️ React.
+- 🚀 Vite.
+
+## Installation
+
+Follow these steps to install and set up the project:
+
+```bash
+npm install
+npm run dev
