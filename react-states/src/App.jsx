@@ -1,4 +1,11 @@
 import './App.css'
+
+
+export default App
+
+// Ejemplo con componentes de clase.
+/*
+import './App.css'
 import React from 'react'
 
 class App extends React.Component { 
@@ -25,3 +32,4 @@ class App extends React.Component {
 }
 
 export default App
+*/
