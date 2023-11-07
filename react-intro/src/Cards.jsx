@@ -9,4 +9,5 @@ function Cards({charactersDC, clickHandler}) {
     </div>
 }
 
+
 export default Cards;
