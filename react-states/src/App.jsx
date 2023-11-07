@@ -14,8 +14,11 @@ class App extends React.Component {
     return (
       <div>
         <h1>React States</h1>
-        <p>My name is {this.state.name}</p>
-        <p>I live in {this.state.city}</p>
+        <h2>My name is {this.state.name}</h2>
+        <h2>I live in {this.state.city}</h2>
+        <button onClick={() => {
+          this.setState({name: 'Juan', city: 'Medellín'})
+        }}>Change</button>
       </div>
     )
   }
