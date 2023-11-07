@@ -1,7 +1,24 @@
 import './App.css'
+import React from 'react'
+import Contador from './Contador'
 
+function App() { 
+
+}
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Ejemplo con componentes de clase.
 /*
