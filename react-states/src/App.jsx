@@ -1,8 +1,10 @@
 import './App.css'
-import React from 'react'
 import Contador from './Contador'
 
 function App() { 
+  return <div>
+    <Contador />
+  </div>
 
 }
 
