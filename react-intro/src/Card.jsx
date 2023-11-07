@@ -9,4 +9,5 @@ function Card({personaje, clickHandler}) {
     </div>
 }
 
+
 export default Card;
