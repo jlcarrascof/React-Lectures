@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import React from 'react';
+import Cards from './Cards';
 
+// Componente funcional
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  const charactersDC = [
+    { 
+      id: "1",
+      name: "Batman",
+      occupation: "Bussinessman",  
+    },
+    {
+      id: "2",
+      name: "A-Bomb",
+      occupation: "Musician, adventurer, author; formerly talk show host",
+    },
+    {
+      id: "3",
+      name: "Jake of Hearts",
+      occupation: "Adventurer",
+    },
+    {
+      id: "4",
+      name: "Captain Atom",
+      occupation: "Former Soldier",
+    }
+  ]
+
+  const clickHandler = () => {
+    alert("Click me");
+  }
+
+  return <div>
+      <h1>Mi primera App en React con componentes funcionales</h1>
+      <Cards charactersDC = {charactersDC} clickHandler = {clickHandler} />
+    </div>;
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+
+
+
+
+// Componente de clase
+/*
+class App extends React.Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return <h1>Mi primera App en React con componentes de clase</h1>;
+  }
+}
+export default App;
+*/
