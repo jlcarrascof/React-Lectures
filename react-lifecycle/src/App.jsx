@@ -34,8 +34,8 @@ class App extends React.Component {
     const src = plantas[srcIndex];
     return <div>
         { montarComponente && <Plantas src={src} montarComponente = {montarComponente} /> }
-        <button>Cambiar Planta</button>
-        <button>
+        <button onClick={this.cambiarPlanta}>Cambiar Planta</button>
+        <button onClick={this.desmontarPlanta}>
           { montarComponente ? 'Desmontar Componente' : 'Montar Componente' }
         </button>
       </div>
