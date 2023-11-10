@@ -19,6 +19,13 @@ class Plantas extends React.Component {
             return console.log('Im in componentDidUpdate - Componente actualizado', this.props.src);
         }
     }
+
+    // Método para desmontar componentes
+    componentWillUnmount() { 
+        if (!this.props.montarComponente) { 
+            return console.log('Im in componentWillUnmount - Componente desmontado!!!', this.props.montarComponente);
+        }
+    }
     
     render() { 
         console.log('Im in render');
