@@ -29,9 +29,10 @@ class App extends React.Component {
 
   render() {
     console.log('render');
+    const { srcIndex, plantas, montarComponente } = this.state;
+    const src = plantas[srcIndex];
     return (
-      <div className="App">
-
+      <div>
         <button onClick={this.handleClick}>Increment</button>
       </div>
     );
