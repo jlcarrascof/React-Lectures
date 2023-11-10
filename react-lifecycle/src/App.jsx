@@ -24,7 +24,6 @@ class App extends React.Component {
   desmontarPlanta = () => { 
     this.setState( (prevState) => ({
       montarComponente: !prevState.montarComponente,
-
     }));
   }
 
