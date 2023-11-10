@@ -12,6 +12,14 @@ class Plantas extends React.Component {
         console.log('Im in componentDidMount');
     }
 
+    // Método para actualización de componentes
+    componentDidUpdate(prevProps) { 
+        console.log('Im the previous state', prevProps);
+        if (this.props.src !== prevProps.src) { 
+            return console.log('Im in componentDidUpdate - Componente actualizado', this.props.src);
+        }
+    }
+    
     render() { 
         console.log('Im in render');
         return <img src={this.props.src} alt="" />;
