@@ -1,4 +1,5 @@
 import React from 'react';
+import Plantas from './Plantas';
 import './App.css';
 
 class App extends React.Component {
@@ -31,15 +32,13 @@ class App extends React.Component {
     console.log('render');
     const { srcIndex, plantas, montarComponente } = this.state;
     const src = plantas[srcIndex];
-    return (
-      <div>
+    return <div>
         { montarComponente && <Plantas src={src} montarComponente = {montarComponente} /> }
         <button>Cambiar Planta</button>
         <button>
           { montarComponente ? 'Desmontar Componente' : 'Montar Componente' }
         </button>
       </div>
-    );
   }
 } 
 
