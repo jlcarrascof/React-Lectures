@@ -15,6 +15,19 @@ class App extends React.Component {
     };
   }
 
+  cambiarPlanta = () => { 
+    this.setState(prevState => { 
+      srcIndex: (prevState.srcIndex + 1) % this.state.plantas.length;
+    });
+  }
+
+  desmontarPlanta = () => { 
+    this.setState( (prevState) => ({
+      montarComponente: !prevState.montarComponente,
+
+    }));
+  }
+
   render() {
     console.log('render');
     return (
