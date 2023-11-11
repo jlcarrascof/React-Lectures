@@ -1,6 +1,6 @@
 /* Usando el hook useEffect */
 import Plantas from './Plantas';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 function App() { 
   const [plants, setPlants] = useState({
@@ -31,6 +31,10 @@ const desmontarPlanta = () => {
     montarComponente: !prevState.montarComponente
   }));
 };
+
+useEffect(() => {
+  
+}, []);
 
 return <div> 
   { montarComponente && <Plantas /> }

@@ -1,3 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ejemplo de ciclo de vida de un componente en React usando componentes de clase
 import React from 'react';
 
 class Plantas extends React.Component { 
@@ -34,3 +55,4 @@ class Plantas extends React.Component {
 }
 
 export default Plantas;
+*/
