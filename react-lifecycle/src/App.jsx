@@ -2,10 +2,8 @@
 import Plantas from './Plantas';
 import React, { useState, useEffect } from 'react';
 
-
-
 function App() { 
-  const [ plants, setPlants ] = useState({
+  const [plants, setPlants] = useState({
     srcIndex: 0,
     plantas: [
       "https://photo620x400.mnstatic.com/d5f4adcc37adc8361ad96289174aac0a/coleccion-de-plantas-acuaticas.jpg?quality=70&format=pjpg",
@@ -15,6 +13,30 @@ function App() {
     montarComponente: true,
   });
 }
+
+const { srcIndex, plantas, montarComponente } = plants;
+const src = plantas[srcIndex];
+const srcRef = useRef(src);
+
+const cambiarPlanta = () => { 
+  setPlants(prevState => ({ 
+    ...plants,
+    srcIndex: (prevState.srcIndex + 1) % this.state.plantas.length
+  }));
+};
+
+const desmontarPlanta = () => { 
+  setPlants(prevState => ({
+    ...plants,
+    montarComponente: !prevState.montarComponente
+  }));
+};
+
+return <div> 
+  { montarComponente && <Plantas /> }
+  <button>Cambiar Planta</button>
+  <button>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
+</div>   
 
 export default App;
 
