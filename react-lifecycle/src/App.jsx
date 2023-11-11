@@ -13,36 +13,36 @@ function App() {
     montarComponente: true,
   });
 
-const { srcIndex, plantas, montarComponente } = plants;
-const src = plantas[srcIndex];
-const srcRef = useRef(src);
+  const { srcIndex, plantas, montarComponente } = plants;
+  const src = plantas[srcIndex];
+  const srcRef = useRef(src);
 
-const cambiarPlanta = () => { 
-  setPlants(prevState => ({ 
-    ...plants,
-    srcIndex: (prevState.srcIndex + 1) % this.state.plantas.length
-  }));
-};
+  const cambiarPlanta = () => { 
+    setPlants(prevState => ({ 
+      ...plants,
+      srcIndex: (prevState.srcIndex + 1) % this.state.plantas.length
+    }));
+  };
 
-const desmontarPlanta = () => { 
-  setPlants(prevState => ({
-    ...plants,
-    montarComponente: !prevState.montarComponente
-  }));
-};
+  const desmontarPlanta = () => { 
+    setPlants(prevState => ({
+      ...plants,
+      montarComponente: !prevState.montarComponente
+    }));
+  };
 
-useEffect(() => {
-  srcRef.current !== src ? console.log('Componente actualizado') : console.log('Montando componente');
-  if (!montarComponente) { 
-    console.log('Adios, componente desmontado');
-  }
-}, [src, montarComponente]);
+  useEffect(() => {
+    srcRef.current !== src ? console.log('Componente actualizado') : console.log('Montando componente');
+    if (!montarComponente) { 
+      console.log('Adios, componente desmontado');
+    }
+  }, [src, montarComponente]);
 
-return <div> 
-  { montarComponente && <Plantas src={src} /> }
-  <button>Cambiar Planta</button>
-  <button>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
-</div>   
+  return <div> 
+    { montarComponente && <Plantas src={src} /> }
+    <button>Cambiar Planta</button>
+    <button>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
+  </div>   
 }
 
 export default App;
