@@ -2,6 +2,28 @@
 
 
 
+function App() { 
+
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ciclo de vida con componentes de clase */
 /*
 import React from 'react';
 import Plantas from './Plantas';
