@@ -12,7 +12,6 @@ function App() {
     ],
     montarComponente: true,
   });
-}
 
 const { srcIndex, plantas, montarComponente } = plants;
 const src = plantas[srcIndex];
@@ -44,6 +43,7 @@ return <div>
   <button>Cambiar Planta</button>
   <button>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
 </div>   
+}
 
 export default App;
 
