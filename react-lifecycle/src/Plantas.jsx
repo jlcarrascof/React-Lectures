@@ -1,5 +1,10 @@
 
 
+function Plantas({ src }) { 
+    return <img src={src} alt="" />;
+}
+
+export default Plantas;
 
 
 

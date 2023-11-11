@@ -33,11 +33,14 @@ const desmontarPlanta = () => {
 };
 
 useEffect(() => {
-  
-}, []);
+  srcRef.current !== src ? console.log('Componente actualizado') : console.log('Montando componente');
+  if (!montarComponente) { 
+    console.log('Adios, componente desmontado');
+  }
+}, [src, montarComponente]);
 
 return <div> 
-  { montarComponente && <Plantas /> }
+  { montarComponente && <Plantas src={src} /> }
   <button>Cambiar Planta</button>
   <button>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
 </div>   
