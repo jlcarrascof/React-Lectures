@@ -1,3 +1,8 @@
+/* Usando el hook useEffect */
+
+
+
+/*
 import React from 'react';
 import Plantas from './Plantas';
 import './App.css';
@@ -43,3 +48,4 @@ class App extends React.Component {
 } 
 
 export default App
+*/
