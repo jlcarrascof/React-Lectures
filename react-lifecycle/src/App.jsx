@@ -20,7 +20,7 @@ function App() {
   const cambiarPlanta = () => { 
     setPlants(prevState => ({ 
       ...plants,
-      srcIndex: (prevState.srcIndex + 1) % this.state.plantas.length
+      srcIndex: (prevState.srcIndex + 1) % plants.plantas.length
     }));
   };
 
@@ -40,8 +40,8 @@ function App() {
 
   return <div> 
     { montarComponente && <Plantas src={src} /> }
-    <button>Cambiar Planta</button>
-    <button>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
+    <button onClick={cambiarPlanta}>Cambiar Planta</button>
+    <button onClick={desmontarPlanta}>{ montarComponente ? 'Desmontar Componente' : 'Montar Componente' }</button>
   </div>   
 }
 
