@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Gallery from './components/Gallery'
+import DetailGallery from './components/DetailGallery'
 
 const Vision = () => {
   return <div>Vision</div>
@@ -28,8 +29,9 @@ function App() {
         <Route path='mision' element={<Mision />} />
         <Route path='history' element={<History />} />
       </Route>  
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/gallery" element={<Gallery />} />
+      <Route path='/contact' element={<Contact />} />
+      <Route path='/gallery' element={<Gallery />} />
+      <Route path='/gallery/:detailGallery' element={<DetailGallery />} />
     </Routes>
   </div>    
 }
