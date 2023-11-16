@@ -20,14 +20,18 @@ const History = () => {
 
 function App() {
 
-  return <div className="App">
+  return <div>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/about' element={<About />}>
+        <Route path='vision' element={<Vision />} />
+        <Route path='mision' element={<Mision />} />
+        <Route path='history' element={<History />} />
+      </Route>  
       <Route path="/contact" element={<Contact />} />
       <Route path="/gallery" element={<Gallery />} />
     </Routes>
   </div>    
 }
 
-export default App
+export default App;
