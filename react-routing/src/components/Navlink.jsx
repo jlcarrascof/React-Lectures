@@ -1,3 +1,19 @@
+import { NavLink as NavLinkComp} from "react-router-dom";
+
+function Navlink({ to, children, ...props }) {
+  return <div>
+    <NavLinkComp {...props}
+    to={to}
+    
+    >
+
+    </NavLinkComp>  
+  </div>
+}
+
+export default Navlink;
+
+/* Codigo original
 import { NavLink as NavLinkComp} from "react-router-dom"
 
 function NavLink({ to, children, ...props }) {
@@ -17,3 +33,4 @@ function NavLink({ to, children, ...props }) {
   )
 }
 export default NavLink;
+*/
