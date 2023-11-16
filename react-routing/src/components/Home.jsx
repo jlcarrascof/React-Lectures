@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import NavLink from "./Navlink";
+import NavLink from "./components/Navlink";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
