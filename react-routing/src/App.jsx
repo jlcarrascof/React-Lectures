@@ -6,6 +6,17 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Gallery from './components/Gallery'
 
+const Vision = () => {
+  return <div>Vision</div>
+}
+
+const Mision = () => {
+  return <div>Mision</div>
+}
+
+const History = () => {
+  return <div>History</div>
+}
 
 function App() {
 
