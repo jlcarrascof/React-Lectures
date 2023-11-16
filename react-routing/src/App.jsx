@@ -9,7 +9,14 @@ import Gallery from './components/Gallery'
 
 function App() {
 
-  return 
+  return <div className="App">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/gallery" element={<Gallery />} />
+    </Routes>
+  </div>    
 }
 
 export default App
