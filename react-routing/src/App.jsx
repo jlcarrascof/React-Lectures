@@ -20,10 +20,9 @@ const History = () => {
 }
 
 function App() {
-
   return <div>
+    <Home />
     <Routes>
-      <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />}>
         <Route path='vision' element={<Vision />} />
         <Route path='mision' element={<Mision />} />
