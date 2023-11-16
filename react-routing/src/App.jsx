@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useNavigate} from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -8,7 +8,16 @@ import Gallery from './components/Gallery'
 import DetailGallery from './components/DetailGallery'
 
 const Vision = () => {
-  return <div>Vision</div>
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/')
+  }
+
+  return <div>
+    <h2>Vision</h2>
+    <button onClick={handleClick}>Go Home</button>
+  </div>
 }
 
 const Mision = () => {
