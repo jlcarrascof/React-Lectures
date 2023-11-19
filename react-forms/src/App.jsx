@@ -6,8 +6,19 @@ function App() {
   const [alumno, setAlumno] = useState('')
   const [email, setEmail] = useState('')
 
+  const handleChangeAlumno = (event) => {
+    setAlumno(event.target.value)
+  }
+
   return <div>
-    
+    <form>
+      <label htmlFor="alumno">Alumno: </label>
+      <input type="text" id="alumno" name="alumno" value={alumno} onChange={handleChangeAlumno}
+      placeholder="Ingrese el nombre del Alumno" />
+      <label htmlFor="email">Correo: </label>
+      <input type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)}
+      placeholder="Ingrese el Correo Electrónico" />
+    </form>  
   </div>
 }
 
