@@ -7,13 +7,19 @@ function App() {
 
   const [alumno, setAlumno] = useState('')
   const [email, setEmail] = useState('')
+  const [error, setError] = useState([])
 
   const handleChangeAlumno = (event) => {
     setAlumno(event.target.value)
   }
 
   const handleChangeEmail = (event) => { 
-    setEmail(event.target.value)
+    if (!emailRegexp.test(email)) {
+      setError(['Debe ingresar un correo válido'])
+    } else {
+      setError('')
+      setEmail(event.target.value)
+    }  
   }
 
   return <div>
