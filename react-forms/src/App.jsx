@@ -23,14 +23,6 @@ function App() {
     setDatos({...datos, [event.target.name]: event.target.value})
   }
 
-  /*
-  const handleChangeEmail = (event) => { 
-    setEmail(event.target.value)
-    if (!emailRegexp.test(email)) setError('Debe ingresar un correo válido')
-    else setError('');
-  }
-  */
-
   return <div>
     <form>
       
