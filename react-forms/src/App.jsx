@@ -39,7 +39,8 @@ function App() {
       name="email" 
       value={email} 
       onChange={handleChangeEmail}
-      placeholder="Ingrese el Correo Electrónico" 
+      placeholder="Ingrese el Correo Electrónico"
+      className={error ? 'warning' : ''} 
       />
       
       <span style={{color:'red', fontSize:'10px'}}>{error}</span>
