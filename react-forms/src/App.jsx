@@ -21,12 +21,28 @@ function App() {
 
   return <div>
     <form>
+      
       <label htmlFor="alumno">Alumno: </label>
-      <input type="text" id="alumno" name="alumno" value={alumno} onChange={handleChangeAlumno}
-      placeholder="Ingrese el nombre del Alumno" />
+      <input 
+      type="text" 
+      id="alumno" 
+      name="alumno" 
+      value={alumno} 
+      onChange={handleChangeAlumno}
+      placeholder="Ingrese el nombre del Alumno"
+       />
+      
       <label htmlFor="email">Correo: </label>
-      <input type="email" id="email" name="email" value={email} onChange={handleChangeEmail}
-      placeholder="Ingrese el Correo Electrónico" />
+      <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      value={email} 
+      onChange={handleChangeEmail}
+      placeholder="Ingrese el Correo Electrónico" 
+      />
+      
+      <span style={{color:'red', fontSize:'10px'}}>{error}</span>
       <input type="submit" value="Enviar" />
     </form>  
   </div>
