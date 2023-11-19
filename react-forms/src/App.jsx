@@ -4,17 +4,23 @@ import './App.css'
 const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
 function App() {
-
-  // const [alumno, setAlumno] = useState('')
-  // const [email, setEmail] = useState('')
+  
   const [datos, setDatos] = useState({ 
     alumno: '',
     email: ''
   });
+
   const [error, setError] = useState({})
 
+  const validate = (datos) => { 
+    let errors = {}
+    if (datos.alumno.length < 3) errors.alumno = 'Debes ingresar un nombre mayor a 3 caracteres'
+    if (!emailRegexp.test(datos.email)) errors.email = 'Debe ingresar un correo válido'
+    return errors;
+  }
+
   const handleChange = (event) => {
-    setDatos({...datos, [event.target.value]: event.target.value})
+    setDatos({...datos, [event.target.name]: event.target.value})
   }
 
   /*
@@ -46,10 +52,10 @@ function App() {
       value={datos.email} 
       onChange={handleChange}
       placeholder="Ingrese el Correo Electrónico"
-      className={error && 'warning' } 
+      // className={error && 'warning' } 
       />
       
-      <span style={{color:'red', fontSize:'10px'}}>{error}</span>
+      {/* {<span style={{color:'red', fontSize:'10px'}}>{error}</span>} */}
       <input type="submit" />
     </form>  
   </div>
