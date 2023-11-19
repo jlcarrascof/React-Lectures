@@ -5,19 +5,25 @@ const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
 function App() {
 
-  const [alumno, setAlumno] = useState('')
-  const [email, setEmail] = useState('')
-  const [error, setError] = useState([])
+  // const [alumno, setAlumno] = useState('')
+  // const [email, setEmail] = useState('')
+  const [datos, setDatos] = useState({ 
+    alumno: '',
+    email: ''
+  });
+  const [error, setError] = useState({})
 
-  const handleChangeAlumno = (event) => {
-    setAlumno(event.target.value)
+  const handleChange = (event) => {
+    setDatos({...datos, [event.target.value]: event.target.value})
   }
 
+  /*
   const handleChangeEmail = (event) => { 
     setEmail(event.target.value)
     if (!emailRegexp.test(email)) setError('Debe ingresar un correo válido')
     else setError('');
   }
+  */
 
   return <div>
     <form>
@@ -27,8 +33,8 @@ function App() {
       type="text" 
       id="alumno" 
       name="alumno" 
-      value={alumno} 
-      onChange={handleChangeAlumno}
+      value={datos.alumno} 
+      onChange={handleChange}
       placeholder="Ingrese el nombre del Alumno"
        />
       
@@ -37,14 +43,14 @@ function App() {
       type="email" 
       id="email" 
       name="email" 
-      value={email} 
-      onChange={handleChangeEmail}
+      value={datos.email} 
+      onChange={handleChange}
       placeholder="Ingrese el Correo Electrónico"
-      className={error ? 'warning' : ''} 
+      className={error && 'warning' } 
       />
       
       <span style={{color:'red', fontSize:'10px'}}>{error}</span>
-      <input type="submit" value="Enviar" />
+      <input type="submit" />
     </form>  
   </div>
 }
