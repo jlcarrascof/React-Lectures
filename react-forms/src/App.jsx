@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
+
 function App() {
 
   const [alumno, setAlumno] = useState('')
@@ -22,6 +24,7 @@ function App() {
       <label htmlFor="email">Correo: </label>
       <input type="email" id="email" name="email" value={email} onChange={handleChangeEmail}
       placeholder="Ingrese el Correo Electrónico" />
+      <input type="submit" value="Enviar" />
     </form>  
   </div>
 }
