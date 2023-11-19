@@ -14,12 +14,9 @@ function App() {
   }
 
   const handleChangeEmail = (event) => { 
-    if (!emailRegexp.test(email)) {
-      setError(['Debe ingresar un correo válido'])
-    } else {
-      setError('')
-      setEmail(event.target.value)
-    }  
+    setEmail(event.target.value)
+    if (!emailRegexp.test(email)) setError('Debe ingresar un correo válido')
+    else setError('');
   }
 
   return <div>
