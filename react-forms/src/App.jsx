@@ -5,7 +5,7 @@ const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
 
 function App() {
   
-  const [datos, setDatos] = useState({ 
+  const [datos, setDatos] = useState({
     alumno: '',
     email: ''
   });
@@ -26,15 +26,19 @@ function App() {
 
   const handleSubmit = (event) => { 
     event.preventDefault()
-    if (Object.keys(error).length === 0) {
-      console.log('enviando datos...' + datos.alumno + ' ' + datos.email)
-    } else {
-      console.log('error')
-    }
+    if (Object.values(datos).every((value) => value.trim() === '')) alert('Debe completar todos los campos')
+    if (Object.values(error).length) alert('Corregir los errores antes de enviar el formulario')
+    else {
+      alert('Formulario enviado correctamente')
+      setDatos({
+        alumno: '', 
+        email: ''
+      }) 
+    } 
   }
 
   return <div>
-    <form onSubmit={}>
+    <form onSubmit={handleSubmit}>
       
       <label htmlFor="alumno">Alumno: </label>
       <input 
