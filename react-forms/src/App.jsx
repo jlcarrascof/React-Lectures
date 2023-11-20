@@ -52,7 +52,7 @@ function App() {
       />
       
       <span style={{color:'red', fontSize:'10px'}}>{error.email}</span> 
-      <input type="submit" />
+      <input type="submit" value="Enviar" />
     </form>  
   </div>
 }
