@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import KeyExample from './KeyExample'
 import './App.css'
 
 const emailRegexp = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
@@ -67,6 +68,7 @@ function App() {
       <span style={{color:'red', fontSize:'10px'}}>{error.email}</span> 
       <input type="submit" value="Enviar" />
     </form>  
+    <KeyExample />
   </div>
 }
 
