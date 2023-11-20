@@ -21,6 +21,7 @@ function App() {
 
   const handleChange = (event) => {
     setDatos({...datos, [event.target.name]: event.target.value})
+    setError(validate({...datos, [event.target.name]: event.target.value}))
   }
 
   return <div>
@@ -34,8 +35,11 @@ function App() {
       value={datos.alumno} 
       onChange={handleChange}
       placeholder="Ingrese el nombre del Alumno"
+      className={error.alumno && 'warning' }
        />
       
+      <span style={{color:'red', fontSize:'10px'}}>{error.alumno}</span>
+
       <label htmlFor="email">Correo: </label>
       <input 
       type="email" 
@@ -44,10 +48,10 @@ function App() {
       value={datos.email} 
       onChange={handleChange}
       placeholder="Ingrese el Correo Electrónico"
-      // className={error && 'warning' } 
+      className={error.email && 'warning' } 
       />
       
-      {/* {<span style={{color:'red', fontSize:'10px'}}>{error}</span>} */}
+      <span style={{color:'red', fontSize:'10px'}}>{error.email}</span> 
       <input type="submit" />
     </form>  
   </div>
