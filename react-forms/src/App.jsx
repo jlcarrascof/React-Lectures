@@ -24,8 +24,17 @@ function App() {
     setError(validate({...datos, [event.target.name]: event.target.value}))
   }
 
+  const handleSubmit = (event) => { 
+    event.preventDefault()
+    if (Object.keys(error).length === 0) {
+      console.log('enviando datos...' + datos.alumno + ' ' + datos.email)
+    } else {
+      console.log('error')
+    }
+  }
+
   return <div>
-    <form>
+    <form onSubmit={}>
       
       <label htmlFor="alumno">Alumno: </label>
       <input 
