@@ -42,3 +42,22 @@ console.log(store);
 store.subscribe(()=>{
     console.log('Suscripción:', store.getState());
 })
+
+// 7.- Creamos las actions creators.
+
+function addTodo (text){
+    return {
+        type:ADD_TODO,
+        payload:text
+    }
+}
+
+// console.log(addTodo ('estudiar Redux'));
+
+function removeTodo (text){
+    return {
+        type:REMOVE_TODO,
+        payload:text
+    }
+}
+
