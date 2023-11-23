@@ -61,3 +61,16 @@ function removeTodo (text){
     }
 }
 
+// 8.- Dispatch.
+
+store.dispatch(addTodo ('comprar pan'));
+store.dispatch(addTodo ('correr'));
+store.dispatch(removeTodo ('correr'));
+
+console.log(store.getState());
+store.dispatch(addTodo ('dormir'));
+store.dispatch(addTodo ('salir temprano'));
+
+console.log(store.getState());
+store.dispatch(removeTodo ('dormir'));
+
