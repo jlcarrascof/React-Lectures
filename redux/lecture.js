@@ -37,6 +37,8 @@ function reducer(state = initialState, action){
 const store = createStore(reducer);
 console.log(store);
 
+// 6.- Usamos el método subscribe.
 
-
-
+store.subscribe(()=>{
+    console.log('Suscripción:', store.getState());
+})
