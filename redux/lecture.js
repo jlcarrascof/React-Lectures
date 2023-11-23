@@ -25,7 +25,7 @@ function reducer(state = initialState, action){
             }
         case REMOVE_TODO:
             return {
-                todos: state.todos.filter((text, i) => i !== action.payload)
+                todos: state.todos.filter((text) => text !== action.payload)
             }
         default:
             return state;
@@ -33,3 +33,10 @@ function reducer(state = initialState, action){
 }
 
 // 5.- Crear store.
+
+const store = createStore(reducer);
+console.log(store);
+
+
+
+
