@@ -7,3 +7,5 @@ const redux = require('redux');
 const createStore = redux.createStore;
 
 // 3.- Tipos de acción.
+const ADD_TODO = 'ADD_TODO';
+const REMOVE_TODO = 'REMOVE_TODO';
