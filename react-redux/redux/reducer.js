@@ -19,7 +19,7 @@ function reducer(state = initialState, { type, payload }) {
       case RECEIVE_POST:
         return { ...state, loading: false, post: payload };
       default:
-        return state;
+        return { ...state };
     }
 }
 
