@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, RESET, GET_POST, RECEIVE_POST } from './actionTypes';
+import { INCREMENT, DECREMENT, RESET, GET_POST, RECEIVE_POST } from './actions/actionsTypes';
 
 const initialState = {
   count: 0,
