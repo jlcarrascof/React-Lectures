@@ -4,7 +4,7 @@ import * as actionsCreators from '../redux/actions/actions';  //* Importa todas 
 function Counter({counter}) {
     console.log(counter);
     return <div>
-        <span>Contador:</span>
+        <span>Contador: {counter}</span>
         <br />
 
         <button>Incrementar</button>
@@ -19,5 +19,22 @@ function mapStateToProps(state) { //* Hace alusión a getState()
         counter: state.count
     }
 }
+
+function mapDispatchToProps(dispatch) { //* Hace alusión a dispatch()
+    return {
+        increment: function() {
+            dispatch(actionsCreators.increment())
+        },    
+        decrement: function() {
+            dispatch(actionsCreators.decrement())
+        },    
+        reset: function() {
+            dispatch(actionsCreators.reset())
+        },    
+        fetchPost: function() { 
+            dispatch(actionsCreators.fetchPost())
+        }    
+    }
+}   
 
 export default connect(mapStateToProps)(Counter);
