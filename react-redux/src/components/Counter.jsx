@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import * as actionsCreators from '../redux/actions/actions';  //* Importa todas las acciones
 
-function Counter({counter}) {
-    console.log(counter);
+function Counter({counter, increment, decrement, reset, fetchPost}) {
+    // console.log(counter);
     return <div>
         <span>Contador: {counter}</span>
         <br />
@@ -31,10 +31,10 @@ function mapDispatchToProps(dispatch) { //* Hace alusión a dispatch()
         reset: function() {
             dispatch(actionsCreators.reset())
         },    
-        fetchPost: function() { 
-            dispatch(actionsCreators.fetchPost())
+        fetchPost: function(counter) { 
+            dispatch(actionsCreators.fetchPost(counter))
         }    
     }
 }   
 
-export default connect(mapStateToProps)(Counter);
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
