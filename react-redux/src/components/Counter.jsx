@@ -6,11 +6,12 @@ function Counter({counter, increment, decrement, reset, fetchPost}) {
     return <div>
         <span>Contador: {counter}</span>
         <br />
-
-        <button>Incrementar</button>
-        <button>Decrementar</button>
-        <button>Resetear</button>
-        <button>Enviar Número a API</button>        
+        <div>
+            <button onClick={increment}>Incrementar</button>
+            <button onClick={decrement}>Decrementar</button>
+            <button onClick={reset}>Resetear</button>
+            <button onClick={() => fetchPost(counter)}>Enviar Número a API</button>
+        </div>            
     </div>      
 }
 
