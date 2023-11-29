@@ -1,8 +1,15 @@
 import { connect } from "react-redux"
 
-function Post() {
+function Post({post, loading}) {
     return <div>
-        Post
+        {
+            loading ? <p>Cargando...</p> : (
+                <div>
+                    <h2>{post.id}</h2>
+                    <h2>{post.title}</h2>
+                </div>                
+            )
+        }
     </div>
 }
 
