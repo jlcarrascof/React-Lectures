@@ -26,7 +26,7 @@ export function fetchPost(valor) { //* accion asincrona
     dispatch(getPost());
     axios(`https://jsonplaceholder.typicode.com/todos/${valor}`)
       .then(({data}) => {
-        console.log(data)
+        // console.log(data)
         return dispatch(receivePost(data))
       })
   } 
