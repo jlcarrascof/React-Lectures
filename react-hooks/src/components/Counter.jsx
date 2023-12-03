@@ -1,9 +1,26 @@
-import { connect, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import * as actionsCreators from '../redux/actions/actions';  //* Importa todas las acciones
 
-function Counter({ increment, decrement, reset, fetchPost }) {
+function Counter() {
 
     const counter = useSelector(state => state.count); //* useSelector() es un hook que permite acceder al estado de redux
+    const dispatch = useDispatch(); //* useDispatch() es un hook que permite acceder a dispatch()
+
+    function increment() { 
+        dispatch(actionsCreators.increment()) 
+    }
+
+    function decrement() {
+        dispatch(actionsCreators.decrement()) 
+    }
+    
+    function reset() {
+        dispatch(actionsCreators.reset()) 
+    }
+
+    function fetchPost(counter) {
+        dispatch(actionsCreators.fetchPost(counter)) 
+    }
 
     return <div>
         <span>Contador: {counter}</span>
@@ -17,21 +34,4 @@ function Counter({ increment, decrement, reset, fetchPost }) {
     </div>      
 }
 
-function mapDispatchToProps(dispatch) { //* Hace alusión a dispatch()
-    return {
-        increment: function() {
-            dispatch(actionsCreators.increment())
-        },    
-        decrement: function() {
-            dispatch(actionsCreators.decrement())
-        },    
-        reset: function() {
-            dispatch(actionsCreators.reset())
-        },    
-        fetchPost: function(counter) { 
-            dispatch(actionsCreators.fetchPost(counter))
-        }    
-    }
-}   
-
-export default connect(null, mapDispatchToProps)(Counter);
+export default Counter;
