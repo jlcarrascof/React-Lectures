@@ -1,6 +1,9 @@
 import { useSelector } from "react-redux"
 
-function Post({post, loading}) {
+function Post() {
+
+    const { post, loading } = useSelector(state => ({post: state.post, loading: state.loading}));
+
     return <div>
         {
             loading ? <p>Cargando...</p> : (
