@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import * as actionsCreators from '../redux/actions/actions';  //* Importa todas las acciones
 
-function Counter() {
+function CounterUseReducer() {
 
     const counter = useSelector(state => state.count); //* useSelector() es un hook que permite acceder al estado de redux
     const dispatch = useDispatch(); //* useDispatch() es un hook que permite acceder a dispatch()
@@ -34,4 +34,4 @@ function Counter() {
     </div>      
 }
 
-export default Counter;
+export default CounterUseReducer;
