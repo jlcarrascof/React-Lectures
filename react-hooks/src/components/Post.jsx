@@ -1,4 +1,4 @@
-import { connect } from "react-redux"
+import { useSelector } from "react-redux"
 
 function Post({post, loading}) {
     return <div>
@@ -13,12 +13,5 @@ function Post({post, loading}) {
     </div>
 }
 
-function mapStateToProps(state) { //* Hace alusión a getState()
-    return {
-        post: state.post,
-        loading: state.loading,
-    }
-}   
-
-export default connect(mapStateToProps)(Post);
+export default Post;
 
