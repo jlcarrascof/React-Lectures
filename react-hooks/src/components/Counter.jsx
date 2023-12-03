@@ -1,8 +1,10 @@
 import { connect, useSelector } from 'react-redux';
 import * as actionsCreators from '../redux/actions/actions';  //* Importa todas las acciones
 
-function Counter({counter, increment, decrement, reset, fetchPost}) {
-    // console.log(counter);
+function Counter({ increment, decrement, reset, fetchPost }) {
+
+    const counter = useSelector(state => state.count); //* useSelector() es un hook que permite acceder al estado de redux
+
     return <div>
         <span>Contador: {counter}</span>
         <br />
@@ -32,4 +34,4 @@ function mapDispatchToProps(dispatch) { //* Hace alusión a dispatch()
     }
 }   
 
-export default connect(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect(null, mapDispatchToProps)(Counter);
