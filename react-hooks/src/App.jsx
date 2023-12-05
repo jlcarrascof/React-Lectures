@@ -1,6 +1,7 @@
 import './App.css'
 import Counter from './components/Counter'
 import CounterUseReducer from './components/CounterUseReducer'
+import DemoUseRef from './components/DemoUseRef'
 import Post from './components/Post'
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
     <Post />
     <br />
     <CounterUseReducer />
+    <br />
+    <DemoUseRef />
   </>
 }
 
