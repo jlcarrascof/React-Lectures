@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useReducer } from 'react';
 import * as actionsCreators from '../redux/actions/actions';  //* Importa todas las acciones
-import { INCREMENT, DECREMENT, RESET, GET_POST, RECEIVE_POST } from './actions/actionsTypes';
+import { INCREMENT, DECREMENT, RESET, GET_POST, RECEIVE_POST } from '../redux/actions/actionsTypes';
 
 const initialState = {
     count: 0,
@@ -50,13 +50,13 @@ function CounterUseReducer() {
     }
 
     return <div>
-        <span>Contador use Reducer: {counterComp}</span>
+        <span>Contador use Reducer: {counterComp.count}</span>
         <br />
         <div>
             <button onClick={increment}>Incrementar</button>
             <button onClick={decrement}>Decrementar</button>
             <button onClick={reset}>Resetear</button>
-            <button onClick={() => fetchPost(counterComp)}>Enviar Número a API</button>
+            <button onClick={() => fetchPost(counterComp.count)}>Enviar Número a API</button>
         </div>            
     </div>      
 }
